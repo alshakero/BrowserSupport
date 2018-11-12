@@ -1,0 +1,42 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <dom-bind>
+        <style>
+            .demo-container {
+                padding: 20px;
+                height: 100vh;
+                background: linear-gradient(to right, #396afc, #2948ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            .demo {
+                background: #fff;
+                height: 100%;
+                border-radius: 20px;
+                padding: 20px;
+                color: #444
+            }
+
+                .demo h1, .demo h3 {
+                    margin: 0
+                }
+
+                .demo hr {
+                    margin: 0;
+                }
+        </style>
+        <template is="dom-bind">
+            <div class="demo-container">
+                <div class="demo">
+                    <h1>Starcounter simplest support test</h1>
+                    <hr />
+                    <p>Please change the number value below, if the mirrored value changed correctly, it means your browser supports Starcounter features well</p>
+                    <input type="number" value="{{model.Count$::change}}" />
+                    <div>
+                        <output>Mirrored value is: {{model.CountMirror}}</output>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </dom-bind>
+</template>
